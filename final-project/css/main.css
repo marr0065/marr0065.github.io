@@ -27,7 +27,9 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset */
+
+
+/* css */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -158,7 +160,7 @@ h1 {
 
 /* -- Welcome --  */
 .welcome {
-    background-image: url("../images/main-banner.jpg");
+    background-image: url("../images/images/main-banner.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -166,7 +168,6 @@ h1 {
     position: relative;
 }
 
-/* Setting an absolute position of the bleed1 section over the welcome section  */
 .welcome .bleed1 {
     position: absolute;
     top: 1%;
@@ -253,10 +254,10 @@ h5 {
     padding-right: 0rem;
 }
 
-/* Styling for Services (and Team images) divs */
+/* services */
 .digital, .marketing, .video, .web, .print {
     background: #ffe6ac;
-    padding: 1rem;
+    padding: 0.5rem;
     padding-top: 0; 
     margin-top: 1rem;
 }
@@ -271,14 +272,14 @@ h5 {
 }
 
 /* -- Vision Section -- */
-/* Setting up bleed accordinly, similiar to Welcome section/bleed */
+
 .vision {
-    background-image: url("../images/vision.jpg");
+    background-image: url("../images/images/vision.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: 315px;
-    /* position: relative; */
+
 }
 
 .bleed {
@@ -306,7 +307,7 @@ h5 {
 }
 
 /* -- Team -- */
-/* Styling for the content and images for the team separately to allow for easy use of grid */
+
 .john-img img, .bob-img img{
     width: 100%;
     height: auto;
@@ -351,7 +352,7 @@ table, td, th {
     padding: 1rem;
   }
  
-/* Resetting/Changing the table width to 100% according to CSS rules */
+
 table {
     width: 100%;
 }
@@ -379,23 +380,11 @@ footer a {
 }
 
 /* -- Services -- */
-/* was debating on using grid template areas to display services here accordingly, ended up not using it */
-/* .services .grid{
-    padding: 1rem;
-    grid-template-areas:
-    "digital" 
-    "marketing" 
-    "video"
-    "web" 
-    "print";
-    display: grid;
-    grid-template-columns:1fr;
-    grid-template-rows: repeat(5,1fr);
-} */
 
-/* -- Service and Send (contact) button styling -- */
+
 .service-button {
-    padding: 40px 0px;
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
     font-size: 24px;
     color: #fff;
     background-color: #222;
@@ -423,10 +412,8 @@ footer a {
     }
 
     /* -- NAV -- */
-    /* Using flexbox to adjust the overall header and content inside */
     header {
         display: flex;
-        /* justify-content: space-between; */
         align-items: center;
         height:150px;
         background-color: #222;
@@ -444,21 +431,17 @@ footer a {
     }
     
     h1 img {
-        width: 75px; /* Sets the desired width */
-        height: auto; /* Sets the height to auto to maintain aspect ratio */
+        width: 75px;
+        height: auto; 
     }
         
-    /* Increasing the h2 font by 1rem to look accordingly to desktop */
+    
     h2 {
         font-size: 5rem;
     }
 
-    /* This is commented out because it made the responsive nav from mobile to desktop look better, however it's inline-block */     
-    /* nav li {
-        display: inline-block;
-    }  */
 
-    /* Using flexbox to display the nav links */
+    
     nav {
         display: flex;
         padding-bottom: 0;
@@ -472,7 +455,7 @@ footer a {
     }
       
     nav li {
-        margin-right: 10px; /* add spacing between items */
+        margin-right: 10px; 
     }
       
     nav a {
@@ -488,16 +471,16 @@ footer a {
         color: #c78c06;
     }
 
-    /* lining up the home button with the rest of the nav links */
+    
     .home {
         margin-top:1rem;
     }
 
     /* -- About -- */
-    /* Defining the about section and container size so that the image has enough space to be inside and adding float so that the text on the right can wrap  */
+    
     .about {
         height: 340px;
-        width: 100%; /* Set the width to 100% of the parent container */
+        width: 100%; 
       }
 
     .container {
@@ -514,7 +497,7 @@ footer a {
     }
     
     /* -- Services -- */
-    /* Setting up our grid, number of columns and rows */
+    
     .services .grid {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
@@ -522,7 +505,7 @@ footer a {
         grid-gap: 0.5rem;
     }  
     
-    /* Using nth-child to denote how each particular div should span across each column  */
+   
     .services .grid div:nth-child(1) {
         grid-column: 1/4;
      }
@@ -541,7 +524,7 @@ footer a {
     }
 
     /* -- Team -- */
-    /* Not particularily need, but makes for a visually more appealing transition from mobile to desktop and vice versa*/
+   
     .john-img, .bob-img {
         display: block;
         background-color: #ffe6ac;
@@ -552,7 +535,7 @@ footer a {
         padding-bottom: 0;
     }
 
-    /* Using another grid (areas) to layout the team content/images */
+
     .team .grid-2 {
         display: grid;
         grid-template-areas:
@@ -562,7 +545,7 @@ footer a {
         grid-template-rows: 1fr 1fr;
     }
 
-    /* This sets up the grid names so that it can be using in the template */
+  
     .john-content {
         grid-area: john-content;
     }
@@ -579,7 +562,7 @@ footer a {
         grid-area: bob-img;
     }
 
-    /* Services button styling */
+    /* Services button*/
     .service-button {
         padding: 40px 0px;
         font-size: 24px;
@@ -590,7 +573,7 @@ footer a {
     }
 
     /* Contact */
-    /* Using a new grid (grid-3) to display the contact in correct positions, same method as previous (grid-2) */
+    
     .contactus .grid-3 {
         display: grid;
         grid-template-areas:
